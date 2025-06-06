@@ -14,4 +14,5 @@ export default defineConfig({
       "@": __dirname
     },
   },
+  base: '/Docusafe/',
 })
