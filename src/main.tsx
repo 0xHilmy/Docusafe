@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { WalletContextProvider } from './contexts/WalletContext'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App'
 
@@ -13,9 +14,11 @@ if (!root) {
 try {
   createRoot(root).render(
     <StrictMode>
-      <WalletContextProvider>
-        <App />
-      </WalletContextProvider>
+      <BrowserRouter basename="/Docusafe">
+        <WalletContextProvider>
+          <App />
+        </WalletContextProvider>
+      </BrowserRouter>
     </StrictMode>
   );
 } catch (error) {
